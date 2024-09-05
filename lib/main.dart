@@ -2,6 +2,6 @@ import 'package:flutter/material.dart';
 
 void main() {
   runApp(const MaterialApp(
-    home: Text('Hallo dzaki joo'),
+    home: Text('Hallo dzaki joo fak'),
   ));
 }
