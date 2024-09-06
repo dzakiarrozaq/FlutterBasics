@@ -14,16 +14,7 @@ class Home extends StatelessWidget {
         backgroundColor: Colors.blue[900],
       ),
       body: Center(
-        child: Text(
-          'Hallo Dzaki',
-          style: TextStyle(
-            fontSize: 20.0,
-            fontWeight: FontWeight.bold,
-            letterSpacing: 2.0,
-            color: Colors.grey[600],
-            fontFamily: 'Poppins',
-          ),
-        ),
+        child: Image.asset('assets/wallpaper1.jpg')
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () { null; },
