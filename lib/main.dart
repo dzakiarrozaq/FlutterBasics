@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 
-void main() =>runApp(MaterialApp(
+void main() =>runApp(const MaterialApp(
   home: Home(),
 ));
 
 class Home extends StatelessWidget {
+  const Home({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -13,17 +15,21 @@ class Home extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.blue[900],
       ),
-      body: Center(
-        child: ElevatedButton.icon(
-          onPressed: (){},
-          icon: Icon(Icons.mail,
-          color: Colors.white,
+      body: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            const Text('Hello world'),
+            ElevatedButton(
+              onPressed: (){},
+              style: ButtonStyle(backgroundColor: WidgetStatePropertyAll(Colors.blue[900])), child: const Text('Click me'),
           ),
-          label: Text('Mail me', style: TextStyle(color: Colors.white)),
-          style: ButtonStyle(
-            backgroundColor: WidgetStatePropertyAll(Colors.blue[900])
+          Container(
+            color: Colors.grey[400],
+            padding: const EdgeInsets.all(30.0),
+            child: const Text('Inside Container'),
           ),
-        ),
+        ],
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () { null; },
