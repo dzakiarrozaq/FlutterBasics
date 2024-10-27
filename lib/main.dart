@@ -16,19 +16,35 @@ class Home extends StatelessWidget {
         backgroundColor: Colors.blue[900],
       ),
       body: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
-            const Text('Hello world'),
-            ElevatedButton(
-              onPressed: (){},
-              style: ButtonStyle(backgroundColor: WidgetStatePropertyAll(Colors.blue[900])), child: const Text('Click me'),
+        children: [
+          Expanded(
+              child: Image.asset('assets/wallpaper1.jpg'),
+            flex: 2,
           ),
-          Container(
-            color: Colors.grey[400],
-            padding: const EdgeInsets.all(30.0),
-            child: const Text('Inside Container'),
+          Expanded(
+            flex: 3,
+            child: Container(
+              padding: EdgeInsets.all(30.0),
+              color: Colors.amber,
+              child: Text('1'),
+            ),
           ),
+          Expanded(
+            flex: 2,
+            child: Container(
+              padding: EdgeInsets.all(30.0),
+              color: Colors.red,
+              child: Text('2'),
+            ),
+          ),
+          Expanded(
+            flex: 1,
+            child: Container(
+              padding: EdgeInsets.all(30.0),
+              color: Colors.blue,
+              child: Text('3'),
+            ),
+          )
         ],
       ),
       floatingActionButton: FloatingActionButton(
